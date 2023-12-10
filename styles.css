@@ -24,9 +24,9 @@ body {
 }
 
 .name-head {
-    font-size: 2.75rem;
+    font-size: 2.85rem;
     font-weight: 700;
-    width: 50vw;
+    width: 18rem;
     margin-bottom: 5px;
 }
 
@@ -35,13 +35,13 @@ body {
 }
 
 .name-sub {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    width: 33vw;
+    width: 12rem;
 }
 
 .name-accent {
-    width: 17vw;
-    height: 1.2rem;
+    width: 6rem;
+    height: 1.4rem;
     background-color: var(--p1);
 }
