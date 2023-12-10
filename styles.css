@@ -1,0 +1,45 @@
+:root {
+    --b0: #000000;
+    --w0: #ffffff;
+    --b1: #0a0a0a;
+    --b2: #1e1e1e;
+    --p1: #b234ff;
+  }
+  
+
+body {
+    background-color: black;
+    color: var(--w0);
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    margin: 20% 10%;
+}
+
+
+.name-cont {
+    padding-top: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-head {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.name-row {
+    display: flex
+}
+
+.name-sub {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.name-accent {
+    width: 65px;
+    height: 1.2rem;
+    background-color: var(--p1);
+}
