@@ -1,14 +1,14 @@
 :root {
     --b0: #000000;
     --w0: #ffffff;
-    --b1: #0a0a0a;
+    --b1: #070a1c;
     --b2: #1e1e1e;
-    --p1: #b234ff;
+    --p1: #f04848;
 }
   
 
 body {
-    background-color: black;
+    background-color: var(--b1);
     color: var(--w0);
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
@@ -59,6 +59,8 @@ body {
     margin-top: 1rem;
     font-size: 1rem;
     font-weight: 300;
+    line-height: 1.6rem;
+    opacity: 0.8;
 }
 
 
