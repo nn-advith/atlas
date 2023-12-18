@@ -4,7 +4,7 @@
     --b1: #0a0a0a;
     --b2: #1e1e1e;
     --p1: #b234ff;
-  }
+}
   
 
 body {
@@ -17,7 +17,7 @@ body {
 
 
 .name-cont {
-    padding-top: 15rem;
+    margin-top: 15rem;
     display: flex;
     flex-direction: column;
 }
@@ -44,3 +44,35 @@ body {
     height: 0.9rem;
     background-color: var(--p1);
 }
+
+
+.about-cont{
+    margin-top: 15rem;
+}
+
+.about-head{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.about-text {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+/* Tab media query */
+@media only screen and (min-width: 600px ) {
+    body {
+      background-color: red;
+    }
+  }
+
+/* Desktop size */
+@media only screen and (min-width: 900px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
