@@ -12,31 +12,47 @@
 }
   
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--b0);
     color: var(--w0);
     font-family: 'Montserrat', sans-serif;
-    margin: 20% 10%;
+    padding: 20% 10%;
+    overflow-x: hidden;
 }
 
 
 /* back grid */
 
+@keyframes back-loop {
+    from {
+        top: -20rem;
+        left: -4rem;
+    }
+    to {
+        top: -15rem;
+        left: 0rem;
+    }
+}
+
 .back-grid {
     position: fixed;
-    top: -20rem;
-    left: -4rem;
+    top: -25rem;
+    left: -10rem;
     display: grid;
-    grid-gap: 1.4em;
+    grid-gap: 1.8em;
     z-index: -9999;
-    overflow-x: hidden;
     transform: rotate(30deg);
     grid-template-rows: repeat(var(--gr), 1fr);
     grid-template-columns: repeat(var(--gc), 1fr);
+    /* animation: back-loop 3s infinite ease backwards; */
 }
 
 .sq {
-    width: 4rem;
+    width: 6rem;
     aspect-ratio: 1/1;
     background-color: var(--b1);
 }
