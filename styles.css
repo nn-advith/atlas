@@ -258,7 +258,7 @@ body {
 /* Tab media query */
 @media only screen and (min-width: 600px ) {
     body {
-      background-color: red;
+      background-color: var(--b0);
     }
   }
 
@@ -266,6 +266,8 @@ body {
 @media only screen and (min-width: 900px) {
     body {
       background-color: var(--b0);
+      padding: 0% 20% ;
+
     }
   }
 
