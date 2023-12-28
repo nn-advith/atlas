@@ -6,7 +6,7 @@ const work_experience = [
         'duration': 'AUG 2023 - PRESENT',
         'title': 'Software Engineer',
         'company': 'HPE',
-        'description': '',
+        'description': 'Developing high quality automation code for internal projects using a wide variety of technologies. ',
     },
     {
         'duration': 'JAN - JULY 2023',
