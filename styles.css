@@ -206,6 +206,10 @@ body {
     color: var(--g1);
 }
 
+.resume-cont {
+    margin-top: 5rem;
+}
+
 .work-resume:link {
     background-color: var(--p1);
     color: var(--w0);
@@ -254,7 +258,7 @@ body {
 /* contact section */
 
 .contact-cont {
-    margin-top: 7rem;
+    margin-top: 10rem;
     display: flex;
     flex-direction: row;
 }
