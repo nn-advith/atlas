@@ -1,18 +1,17 @@
 :root {
-    --b0: #fff;
+    /* --b0: #fff;
     --w0: #000;
     --b1: #f1f1f1;
-    --b2: #343434;
-    --p1: #5ea8f7;
-    --g1: #121212;
-    --element: #5ea8f7;
-    /* --b0: #000000;
+    --b2: #dadada;
+    --p1: #6e70fa;
+    --g1: #121212; */
+   
+    --b0: #000000;
     --w0: #ffffff;
     --b1: #0e0e0e;
     --b2: #1e1e1e;
     --p1: #6e70fa;
     --g1: #b8b8b8;
-    --element: #17EBA0; */
 
     --gr: 1;
     --gc: 1;
@@ -29,6 +28,20 @@ body {
     font-family: 'Inter', sans-serif;
     padding: 20% 5% 10% 5%;
     overflow-x: hidden;
+}
+
+.lum-mode {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0.5rem;
+    right:0.3rem;
+    color: var(--g1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: 0.8;
 }
 
 
@@ -163,7 +176,7 @@ body {
 
 .skill-item {
     display: inline-block;
-    background-color: #dadada;
+    background-color: var(--b2);
     color: var(--p1);
     font-size: 0.8rem;
     font-weight: 600;

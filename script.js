@@ -15,6 +15,10 @@ const work_experience = [
         'description': 'Worked on Ansible and Python automation of CaaS deployments such as Redhat Openshift and VMware TCP CaaS, alongside input validation and hardware validation.',
     }
 ]
+var luminanceMode = "dark"
+let lumToggler = document.querySelector(".lum-mode")
+
+var root_element = document.querySelector(":root");
 
 function makeGrid(row, col) {
     const back_grid = document.querySelector(".back-grid")
@@ -71,6 +75,34 @@ function populateExperience() {
     })
 }
 
+
+function toggleLuminanceMode() {
+    
+    if (luminanceMode == "dark") {
+        lumToggler.innerHTML = '<i class="fa-solid fa-moon"></i>'
+        root_element.style.setProperty("--b0", "#000000")
+        root_element.style.setProperty("--b1", "#0e0e0e")
+        root_element.style.setProperty("--b2", "#1e1e1e")
+        root_element.style.setProperty("--w0", "#ffffff")
+        root_element.style.setProperty("--g1", "#b8b8b8")
+        root_element.style.setProperty("--p1", "#6e70fa")
+        luminanceMode = "light"
+    } else {
+        lumToggler.innerHTML = '<i class="fa-solid fa-sun"></i>'
+        root_element.style.setProperty("--b0", "#fff")
+        root_element.style.setProperty("--b1", "#f1f1f1")
+        root_element.style.setProperty("--b2", "#dadada")
+        root_element.style.setProperty("--w0", "#000")
+        root_element.style.setProperty("--g1", "#121212")
+        root_element.style.setProperty("--p1", "#6e70fa")
+        luminanceMode = "dark"
+    }
+}
+
+
 makeGrid(20, 20)
 populateSkills()
 populateExperience()
+
+lumToggler.addEventListener('click', toggleLuminanceMode)
+
