@@ -78,7 +78,7 @@ function populateExperience() {
 
 function toggleLuminanceMode() {
     
-    if (luminanceMode == "dark") {
+    if (luminanceMode == "light") {
         lumToggler.innerHTML = '<i class="fa-solid fa-moon"></i>'
         root_element.style.setProperty("--b0", "#000000")
         root_element.style.setProperty("--b1", "#0e0e0e")
@@ -86,7 +86,7 @@ function toggleLuminanceMode() {
         root_element.style.setProperty("--w0", "#ffffff")
         root_element.style.setProperty("--g1", "#b8b8b8")
         root_element.style.setProperty("--p1", "#6e70fa")
-        luminanceMode = "light"
+        luminanceMode = "dark"
     } else {
         lumToggler.innerHTML = '<i class="fa-solid fa-sun"></i>'
         root_element.style.setProperty("--b0", "#fff")
@@ -95,7 +95,7 @@ function toggleLuminanceMode() {
         root_element.style.setProperty("--w0", "#000")
         root_element.style.setProperty("--g1", "#121212")
         root_element.style.setProperty("--p1", "#6e70fa")
-        luminanceMode = "dark"
+        luminanceMode = "light"
     }
 }
 
@@ -105,4 +105,4 @@ populateSkills()
 populateExperience()
 
 lumToggler.addEventListener('click', toggleLuminanceMode)
-
+lumToggler.innerHTML = '<i class="fa-solid fa-sun"></i>'
