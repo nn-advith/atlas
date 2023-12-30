@@ -2,7 +2,7 @@
     --b0: #fff;
     --w0: #000;
     --b1: #f1f1f1;
-    --b2: #717171;
+    --b2: #343434;
     --p1: #5ea8f7;
     --g1: #121212;
     --element: #5ea8f7;
@@ -163,8 +163,8 @@ body {
 
 .skill-item {
     display: inline-block;
-    background-color: var(--p1);
-    color: var(--g1);
+    background-color: #dadada;
+    color: var(--p1);
     font-size: 0.8rem;
     font-weight: 600;
     padding: 0.4rem 0.7rem;
@@ -191,12 +191,12 @@ body {
 .work-date {
     color: var(--g1);
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .work-dot {
     color: var(--p1);
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .work-title {
@@ -214,7 +214,7 @@ body {
 }
 
 .resume-cont {
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 .work-resume:link {
