@@ -1,11 +1,18 @@
 :root {
-    --b0: #000000;
+    --b0: #fff;
+    --w0: #000;
+    --b1: #f1f1f1;
+    --b2: #717171;
+    --p1: #5ea8f7;
+    --g1: #121212;
+    --element: #5ea8f7;
+    /* --b0: #000000;
     --w0: #ffffff;
     --b1: #0e0e0e;
     --b2: #1e1e1e;
     --p1: #6e70fa;
     --g1: #b8b8b8;
-    --element: #17EBA0;
+    --element: #17EBA0; */
 
     --gr: 1;
     --gc: 1;
@@ -82,7 +89,7 @@ body {
 
 .name-sub {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     width: 9rem;
 }
 
@@ -109,7 +116,7 @@ body {
 .about-text {
     margin-top: 2rem;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.4rem;
     color: var(--g1);
 }
@@ -156,10 +163,10 @@ body {
 
 .skill-item {
     display: inline-block;
-    background-color: var(--b2);
-    color: var(--p1);
-    font-weight: 600;
+    background-color: var(--p1);
+    color: var(--g1);
     font-size: 0.8rem;
+    font-weight: 600;
     padding: 0.4rem 0.7rem;
     margin-right: 0.5rem;
     margin-top: 0.5rem;
