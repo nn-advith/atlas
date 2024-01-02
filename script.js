@@ -99,6 +99,14 @@ function toggleLuminanceMode() {
     }
 }
 
+function getLink() {
+    // console.log(this.href.split('#')[1])
+    nav_links.forEach(i => {
+        i.classList.remove('nav-link-active')
+    })
+    this.classList.add('nav-link-active')
+
+}
 
 makeGrid(20, 20)
 populateSkills()
@@ -106,3 +114,37 @@ populateExperience()
 
 lumToggler.addEventListener('click', toggleLuminanceMode)
 lumToggler.innerHTML = '<i class="fa-solid fa-sun"></i>'
+
+
+
+let nav_links = document.querySelectorAll('.nav-link')
+nav_links.forEach((i) => {
+    i.addEventListener('click', getLink)
+})
+
+
+window.addEventListener("load", (event) => {
+    let sec = window.location.href.split('#')[1]
+    nav_links.forEach(i => {
+        if (String(i.children[0].children[1].innerText).toLowerCase() == sec) {
+            i.classList.add('nav-link-active')
+        }
+    })
+    if (sec == undefined){
+        nav_links[0].classList.add('nav-link-active')
+    }
+  });
+
+  
+window.addEventListener('hashchange',(e) => {
+    let section = e.newURL.split('#')[1]
+    nav_links.forEach((i) => {
+        if (String(i.children[0].children[1].innerText).toLowerCase() == section) {
+            i.classList.add('nav-link-active')
+        }else{
+            i.classList.remove('nav-link-active')
+        }
+    })
+  })
+
+
