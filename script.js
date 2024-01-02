@@ -79,7 +79,9 @@ function populateExperience() {
 function toggleLuminanceMode() {
     
     if (luminanceMode == "light") {
-        lumToggler.innerHTML = '<i class="fa-solid fa-sun"></i>'
+        // lumToggler.innerHTML = '<i class="fa-solid fa-sun"></i>'
+        lumToggler.classList.add("lum-light")
+        lumToggler.classList.remove("lum-dark")
         root_element.style.setProperty("--b0", "#000000")
         root_element.style.setProperty("--b1", "#0e0e0e")
         root_element.style.setProperty("--b2", "#1e1e1e")
@@ -88,7 +90,9 @@ function toggleLuminanceMode() {
         root_element.style.setProperty("--p1", "#6e70fa")
         luminanceMode = "dark"
     } else {
-        lumToggler.innerHTML = '<i class="fa-solid fa-moon"></i>'
+        // lumToggler.innerHTML = '<i class="fa-solid fa-moon"></i>'
+        lumToggler.classList.add("lum-dark")
+        lumToggler.classList.remove("lum-light")
         root_element.style.setProperty("--b0", "#fff")
         root_element.style.setProperty("--b1", "#f1f1f1")
         root_element.style.setProperty("--b2", "#dadada")
@@ -113,7 +117,7 @@ populateSkills()
 populateExperience()
 
 lumToggler.addEventListener('click', toggleLuminanceMode)
-lumToggler.innerHTML = '<i class="fa-solid fa-sun"></i>'
+// lumToggler.innerHTML = '<i class="fa-solid fa-sun"></i>'
 
 
 
@@ -135,7 +139,7 @@ window.addEventListener("load", (event) => {
     }
   });
 
-  
+
 window.addEventListener('hashchange',(e) => {
     let section = e.newURL.split('#')[1]
     nav_links.forEach((i) => {
