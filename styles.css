@@ -28,6 +28,8 @@ body {
     font-family: 'Inter', sans-serif;
     padding: 20% 5% 10% 5%;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .lum-mode {
@@ -42,8 +44,13 @@ body {
     align-items: center;
     z-index: 100;
     opacity: 0.8;
+    cursor: pointer;
 }
 
+/* navbar */
+.navbar {
+    display: none;
+}
 
 /* back grid */
 
@@ -63,7 +70,7 @@ body {
     top: -35rem;
     left: -40rem;
     display: grid;
-    grid-gap: 1.8em;
+    grid-gap: 1.8rem;
     z-index: -9999;
     transform: rotate(30deg);
     grid-template-rows: repeat(var(--gr), 1fr);
@@ -77,6 +84,14 @@ body {
     aspect-ratio: 1/1;
     left: 0rem;
     background-color: var(--b1);
+}
+
+.fade-grid {
+    display: none;
+}
+
+.desk-contact {
+    display: none;
 }
 
 
@@ -97,7 +112,7 @@ body {
 }
 
 .name-row {
-    display: flex
+    display: flex;
 }
 
 .name-sub {
@@ -130,7 +145,7 @@ body {
     margin-top: 2rem;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.4rem;
+    line-height: 1.6rem;
     color: var(--g1);
 }
 
@@ -195,6 +210,7 @@ body {
 .work-head{
     font-size: 1.2rem;
     font-weight: 600;
+    
 }
 
 .work-item {
@@ -221,13 +237,13 @@ body {
 .work-desc {
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.4rem;
+    line-height: 1.6rem;
     margin-top: 0.5rem;
     color: var(--g1);
 }
 
 .resume-cont {
-    margin-top: 7rem;
+    margin-top: 4rem;
 }
 
 .work-resume:link {
@@ -310,8 +326,150 @@ body {
 
 /* Tab media query */
 @media only screen and (min-width: 600px ) {
+
+
     body {
       background-color: var(--b0);
+      display: flex;
+      flex-direction: row;
+      position: relative;
+        justify-content: center;
+      padding: 5% 0%;
+
+    }
+
+    header {
+        position: fixed;
+        margin-right: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+
+    .header-section {
+        height: 80vh;
+
+    }
+
+    main {
+        width: 150%;
+        margin-left: 50%;
+    }
+
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        /* margin-top: 5rem; */
+    }
+
+    .nav-item {
+        margin: 0.8rem 0rem;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+    }
+
+    .nav-accent {
+        width: 5rem;
+        height: 0.1rem;
+        background-color: var(--w0);
+        margin-top: 0.5rem;
+    }
+
+    .nav-accent-inactive {
+        width: 3rem;
+        height: 0.1rem;
+        background-color: var(--w0);
+        margin-top: 0.5rem;
+        opacity: 0.6;
+    }
+
+    .nav-text {
+        margin-left: 1rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+    }
+    
+    
+    .nav-text-inactive {
+        font-weight: 600;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        margin-left: 1rem;
+        opacity: 0.6;
+    }
+
+
+    /* back grid */
+
+    .back-grid {
+        gap: 1.8rem;
+    }
+
+    .sq {
+        width: 6rem;
+    }
+
+    .fade-grid {
+        display: flex;
+        position: fixed;
+        z-index: -9998;
+        box-shadow: 0 0 200px 200px var(--b0);
+        background-color: var(--b0);
+        transform: rotate(10deg);
+        width: 80vw;
+        top: -50vh;
+        left: -35vw;
+        height: 200vh;
+    }
+
+
+    .name-cont {
+        margin-top: 5rem;
+    }
+
+    .name-head {
+        font-size: 3rem;
+        width: 20rem;
+        /* background-color: red; */
+    }
+
+    .name-row{
+        margin-top: 0.5rem;
+    }
+
+    .name-sub {
+        font-size: 1.2rem;
+        width: 12rem;
+        /* margin-top: rem; */
+    }
+
+    .name-accent {
+        width: 6.2rem;
+        margin-left: 0rem;
+        height: 1rem;
+        /* margin-top: 0.8rem; */
+    }
+
+    .about-cont {
+        margin-top: 5rem;
+    }
+
+
+    /* contact-container-end */
+
+    .contact-cont {
+        display: none;
+    }
+
+    .desk-contact {
+        display: flex;
+        /* position: absolute; */
+        /* bottom: 0; */
+        bottom: 0rem;
     }
   }
 
