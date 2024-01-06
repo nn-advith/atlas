@@ -19,7 +19,7 @@
 
 
 html {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     scroll-behavior: smooth;
 }
 
@@ -28,7 +28,7 @@ body {
     color: var(--w0);
     font-family: 'Inter', sans-serif;
     padding: 20% 5% 10% 5%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     display: flex;
     flex-direction: column;
 }
@@ -388,29 +388,36 @@ body {
         background-color: var(--b0);
         display: flex;
         flex-direction: row;
-        position: relative;
+        /* position: relative; */
         justify-content: center;
         padding: 5% 0%;
 
     }
 
-    header {
-        position: fixed;
-        margin-right: 50%;
+    .main-dir {
+        width: 60vw; 
+        display: flex; 
+        flex-direction: row; 
+        position: relative;
+    }
+
+    /* header {
+        
+    } */
+
+    .header-section {
+        height: 70vh;
+        position: sticky;
+        top: 1rem;
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
     }
 
-    .header-section {
-        height: 90vh;
-
-    }
-
     main {
-        width: 150%;
-        margin-left: 50%;
+        width: 50%;
     }
 
 
