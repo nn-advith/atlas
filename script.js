@@ -1,8 +1,7 @@
 // This is javascript file for NNA portfolio
 
 const skill_array = ['Python', 'Ansible', 'Javascript', 'ReactJS', 'Go', 'Automation', 'Webdev', 'Shell Scripting']
-const work_experience = [
-    {
+const work_experience = [{
         'duration': 'AUG 2023 - PRESENT',
         'title': 'Software Engineer',
         'company': 'HPE',
@@ -25,7 +24,7 @@ function makeGrid(row, col) {
     back_grid.style.setProperty('--gr', row)
     back_grid.style.setProperty('--gc', col)
 
-    for (i =0; i< row*col; i++){
+    for (i = 0; i < row * col; i++) {
         let sq = document.createElement("div")
         sq.className = "sq"
         back_grid.appendChild(sq)
@@ -41,7 +40,7 @@ function populateSkills() {
         skill_item.innerText = item
         skill_grid.appendChild(skill_item)
     })
-    
+
 }
 
 function populateExperience() {
@@ -52,7 +51,7 @@ function populateExperience() {
         let work_item = document.createElement("div")
         work_item.className = "work-item"
 
-        let work_dot =  document.createElement("span")
+        let work_dot = document.createElement("span")
         work_dot.className = "work-dot"
         work_dot.innerText = "•"
 
@@ -62,7 +61,7 @@ function populateExperience() {
 
         let work_title = document.createElement("div")
         work_title.className = 'work-title'
-        work_title.innerHTML = String(item['title'])+" <span class='work-dot'> • </span> "+String(item['company']) 
+        work_title.innerHTML = String(item['title']) + " <span class='work-dot'> • </span> " + String(item['company'])
 
         let work_description = document.createElement("div")
         work_description.className = 'work-desc'
@@ -77,7 +76,7 @@ function populateExperience() {
 
 
 function toggleLuminanceMode() {
-    
+
     if (luminanceMode == "light") {
         // lumToggler.innerHTML = '<i class="fa-solid fa-sun"></i>'
         lumToggler.classList.add("lum-light")
@@ -94,7 +93,7 @@ function toggleLuminanceMode() {
         lumToggler.classList.add("lum-dark")
         lumToggler.classList.remove("lum-light")
         root_element.style.setProperty("--b0", "#fff")
-        root_element.style.setProperty("--b1", "#f1f1f1")
+        root_element.style.setProperty("--b1", "#e7e7e7")
         root_element.style.setProperty("--b2", "#dadada")
         root_element.style.setProperty("--w0", "#000")
         root_element.style.setProperty("--g1", "#121212")
@@ -112,7 +111,7 @@ function getLink() {
 
 }
 
-makeGrid(20, 20)
+makeGrid(50, 50)
 populateSkills()
 populateExperience()
 
@@ -134,21 +133,19 @@ window.addEventListener("load", (event) => {
             i.classList.add('nav-link-active')
         }
     })
-    if (sec == undefined){
+    if (sec == undefined) {
         nav_links[0].classList.add('nav-link-active')
     }
-  });
+});
 
 
-window.addEventListener('hashchange',(e) => {
+window.addEventListener('hashchange', (e) => {
     let section = e.newURL.split('#')[1]
     nav_links.forEach((i) => {
         if (String(i.children[0].children[1].innerText).toLowerCase() == section) {
             i.classList.add('nav-link-active')
-        }else{
+        } else {
             i.classList.remove('nav-link-active')
         }
     })
-  })
-
-
+})
