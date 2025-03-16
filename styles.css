@@ -8,7 +8,7 @@
 
     --b0: #000000;
     --w0: #ffffff;
-    --b1: #0e0e0e;
+    --b1: #0c0c0c;
     --b2: #1e1e1e;
     --p1: #6e70fa;
     --g1: #b8b8b8;
@@ -348,6 +348,7 @@ body {
     outline: none;
     border: none;
     box-shadow: none;
+    filter: invert(1);
 }
 
 .icon-link:visited {
@@ -376,6 +377,14 @@ body {
     outline: none;
     border: none;
     box-shadow: none;
+}
+
+.icon-img-inverted{
+    filter: invert(1);
+}
+
+.icon-img {
+    filter: invert(0);
 }
 
 
