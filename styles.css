@@ -33,6 +33,11 @@ body {
     flex-direction: column;
 }
 
+body ::selection {
+    background-color: var(--p1);
+    color: var(--w0);
+}
+
 .lum-mode {
     width: 10px;
     height: 10px;
