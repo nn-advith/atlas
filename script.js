@@ -148,9 +148,33 @@ lumToggler.addEventListener("click", toggleLuminanceMode);
 // lumToggler.innerHTML = '<i class="fa-solid fa-sun"></i>'
 
 let nav_links = document.querySelectorAll(".nav-link");
+let sections = document.querySelectorAll(".section-cont");
+
+// click handler
 nav_links.forEach((i) => {
   i.addEventListener("click", getLink);
 });
+
+// intersection handler
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+        nav_links.forEach((i) => {
+          i.classList.toggle("nav-link-active", i.getAttribute("href")===`#${id}`)
+        });
+      }
+    });
+  },
+  {
+    threshold:0,
+    rootMargin: "-25% 0px -75% 0px",
+  }
+)
+sections.forEach((sec) => {
+  observer.observe(sec)
+})
 
 window.addEventListener("load", (event) => {
   let sec = window.location.href.split("#")[1];
