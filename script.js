@@ -3,11 +3,10 @@
 const skill_array = [
   "Golang",
   "Python",
-  "Javascript",
-  "ReactJS",
-  "React-Native",
   "Bash scripting",
   "Openstack",
+  "Kubernetes",
+  "OpenShift",
   "Webdev",
   "NoSQL",
   "Wails",
@@ -19,14 +18,14 @@ const work_experience = [
     title: "Senior Software Developer",
     company: "HCLTech",
     description:
-      "Working on high performance application development, primarily related to RADIUS and RadSec protocols. ",
+      "Currently working on building RADIUS and RadSec applications and deploying them across Cluster and VM environments. Involved in end-to-end release activities from development, testing and deployment to integration with other dependent applications and documentation.",
   },
   {
     duration: "AUG 2023 - OCT 2023",
     title: "Software Engineer",
     company: "HPE",
     description:
-      "Developed high quality automation code for internal projects using a wide variety of technologies. Part of the development team for a high performance loadbalancer/router application to forward TS.43 token requests.",
+      "Developed high quality automation code (primarily using Ansible) for internal projects using a wide variety of technologies. Part of the development team for a high performance HTTP loadbalancer/router application to forward TS.43 token requests.",
   },
   {
     duration: "JAN - JULY 2023",
